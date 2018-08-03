@@ -45,7 +45,7 @@ class OpenSubcommand extends Subcommand{
 			if($container === null){
 				$defaultCount = $this->plugin->getDefaultCount();
 				if($defaultCount < 1){
-					$sender->sendMessage($this->plugin->getLanguage()->translateString("commands.virtualchest.open.failure.none"));
+					$sender->sendMessage($this->plugin->getLanguage()->translate("commands.virtualchest.open.failure.none"));
 					return true;
 				}else{
 					$container = new VirtualChestContainer($playerName, $defaultCount);
@@ -55,13 +55,13 @@ class OpenSubcommand extends Subcommand{
 			$number = isset($args[0]) ? strtolower($args[0]) : 1;
 			$count = $container->getCount();
 			if(!is_numeric($number) || $number > $count){
-				$sender->sendMessage($this->plugin->getLanguage()->translateString("commands.virtualchest.open.failure.invalid", [$number]));
-				$sender->sendMessage($this->plugin->getLanguage()->translateString("commands.virtualchest.open.count", [(string) $count]));
+				$sender->sendMessage($this->plugin->getLanguage()->translate("commands.virtualchest.open.failure.invalid", [$number]));
+				$sender->sendMessage($this->plugin->getLanguage()->translate("commands.virtualchest.open.count", [(string) $count]));
 			}else{
 				$sender->addWindow($container->getChest($number - 1));
 			}
 		}else{
-			$sender->sendMessage($this->plugin->getLanguage()->translateString("commands.generic.onlyPlayer"));
+			$sender->sendMessage($this->plugin->getLanguage()->translate("commands.generic.onlyPlayer"));
 		}
 		return true;
 	}

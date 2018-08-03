@@ -53,18 +53,18 @@ class PriceSubcommand extends Subcommand{
 				}
 			}else{
 				if(!is_numeric($args[0])){
-					$sender->sendMessage($this->plugin->getLanguage()->translateString("commands.generic.num.notNumber", [$args[0]]));
+					$sender->sendMessage($this->plugin->getLanguage()->translate("commands.generic.num.notNumber", [$args[0]]));
 				}elseif(((int) $args[0]) < -1){
-					$sender->sendMessage($this->plugin->getLanguage()->translateString("commands.generic.num.tooSmall", [$args[0], "-1"]));
+					$sender->sendMessage($this->plugin->getLanguage()->translate("commands.generic.num.tooSmall", [$args[0], "-1"]));
 				}else{
 					$price = (string) ((int) $args[0]);
 				}
 			}
 			if($price === null){
-				$sender->sendMessage($this->plugin->getLanguage()->translateString("commands.generic.num.notNumber", [$args[0]]));
+				$sender->sendMessage($this->plugin->getLanguage()->translate("commands.generic.num.notNumber", [$args[0]]));
 			}else{
 				$this->plugin->setPrice($price);
-				$sender->sendMessage($this->plugin->getLanguage()->translateString("commands.virtualchest.price.success", [$price]));
+				$sender->sendMessage($this->plugin->getLanguage()->translate("commands.virtualchest.price.success", [$price]));
 			}
 			return true;
 		}else{

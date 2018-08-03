@@ -112,7 +112,7 @@ class VirtualChest extends PluginBase{
 
 		//Load language file
 		$this->language = new PluginLang($this, $config->getNested("settings.language"));
-		$this->getLogger()->info($this->language->translateString("language.selected", [$this->language->getName(), $this->language->getLang()]));
+		$this->getLogger()->info($this->language->translate("language.selected", [$this->language->getName(), $this->language->getLang()]));
 
 		//Load virtual chest settings data
 		if(file_exists($file = "{$this->getDataFolder()}Settings.dat")){
@@ -134,8 +134,8 @@ class VirtualChest extends PluginBase{
 		$this->command = new PluginCommand($config->getNested("command.name"), $this);
 		$this->command->setPermission("virtualchest.cmd");
 		$this->command->setAliases($config->getNested("command.aliases"));
-		$this->command->setUsage($this->language->translateString("commands.virtualchest.usage"));
-		$this->command->setDescription($this->language->translateString("commands.virtualchest.description"));
+		$this->command->setUsage($this->language->translate("commands.virtualchest.usage"));
+		$this->command->setDescription($this->language->translate("commands.virtualchest.description"));
 		$this->getServer()->getCommandMap()->register($this->getName(), $this->command);
 
 		//Register subcommands
