@@ -5,7 +5,7 @@ version: 2.0.2
 api: [3.0.0, 3.0.0-ALPHA12, 4.0.0]
 author: PresentKim
 website: https://github.com/PresentKim/VirtualChest-PMMP
-description: Give virtual chest to player
+description: Give virtual chest to player!
 softdepend: [EconomyAPI, MathParserLib]
 
 permissions:
