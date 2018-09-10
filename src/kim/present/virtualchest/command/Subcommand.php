@@ -75,7 +75,7 @@ abstract class Subcommand{
 	public function handle(CommandSender $sender, array $args = []) : void{
 		if($sender->hasPermission($this->permission)){
 			if(!$this->execute($sender, $args)){
-				$sender->sendMessage($this->plugin->getLanguage()->translate("commands.virtualchest.{$this->label}.usage"));
+				$sender->sendMessage($this->plugin->getLanguage()->translate("commands.virtualchest." . static::LABEL . ".usage"));
 			}
 		}else{
 			$sender->sendMessage($this->plugin->getLanguage()->translate("commands.generic.permission"));
@@ -94,7 +94,7 @@ abstract class Subcommand{
 	 * @return string
 	 */
 	public function getLabel() : string{
-		return $this::LABEL;
+		return static::LABEL;
 	}
 
 	/**
