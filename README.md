@@ -1,4 +1,4 @@
-# <img src="./assets/icon/index.svg" height="50" width="50"> VirtualChest  
+# <img src="https://rawgit.com/PresentKim/SVG-files/master/plugin-icons/virtualchest.svg" height="50" width="50"> VirtualChest  
 __A plugin for [PMMP](https://pmmp.io) :: Give virtual chest to player!__  
 
 [![license](https://img.shields.io/github/license/Blugin/VirtualChest-PMMP.svg?label=License)](./LICENSE)
